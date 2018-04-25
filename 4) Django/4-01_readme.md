@@ -5,7 +5,10 @@
 --
 
 ### virtualenv와 관련하여
-> The venv module provides support for creating lightweight “virtual environments” with their own site directories, optionally isolated from system site directories. Each virtual environment has its own Python binary (allowing creation of environments with various Python versions) and can have its own independent set of installed Python packages in its site directories.
+> The venv module provides support for creating lightweight “virtual environments” with their own site directories, optionally isolated from system site directories. Each virtual environment has its own Python binary (allowing creation of environments with various Python versions) and can have its own independent set of installed Python packages in its site directories.  
+
+> 해석하자면, venv모듈은 나의 디렉토리에 lightweight한 가상환경을 제공합니다! 옵셔널하게 이것은 시스템 디렉토리와도 분리될 수 있습니다. 개별의 가상환경은 그것만의 파이썬 바이너리를 갖게되고, 파이썬 패키지를 독립적으로 설치되도록 합니다.  
+**정리하자면, virtualenv는 나의 디렉토리마다 가상환경을 제공하기 때문에 나의 디렉토리가 즉 독립된 프로젝트처럼 돌아갈 수 있도록 합니다.**
 
 - Q. 왜 장고 프로젝트는 virtualenv를 활용할까.
 - A. 독립적인 가상의 파이썬 실행환경을 제공한다. 쉽게 말하면 프로젝트별로 패키지 설치가 가능하다는 이점이 있다.  
@@ -35,15 +38,18 @@
     $ python3 -m venv 내 가상환경 이름
     $ python3 -m venv myvenv
     ```
-    2. 가상환경을 만들었을 때 오류사항이 있으면 아래의 에러가 나타날 수도 있다.   
-    ***나는 설치과정에서 해당 에러가 났음.***
-    ```
+    2. 가상환경을 만들었을 때 오류사항이 있으면 아래의 에러가 나타날 수도 있다.  
+    ***나는 설치과정에서 해당 에러가 났음.***  
+  
+    ```bash
     The virtual environment was not created successfully because ensurepip is not available.  On Debian/Ubuntu systems, you need to install the python3-venv package using the following command.
         apt install python3-venv
-    You may need to use sudo with that command.  After installing the python3-venv package, recreate your virtual environment.
+    You may need to use sudo with that command. After installing the python3-venv package, recreate your virtual environment.
+    
+    # 쉽게 말하면 virtual environment가 ensurepip가 사용되지 않았기에 제대로 설치되지 않은 것.
     ```
     - ensurepip와 관련해서 bootstraping(self-start process) https://docs.python.org/3.5/library/ensurepip.html  
-    > The ensurepip package provides support for bootstrapping the pip installer into an existing Python installation or virtual environment. This bootstrapping approach reflects the fact that pip is an independent project with its own release cycle, and the latest available stable version is bundled with maintenance and feature releases of the CPython reference interpreter.
+    > The ensurepip package provides support for bootstrapping the pip installer into an existing Python installation or virtual environment. This bootstrapping approach reflects the fact that pip is an independent project with its own release cycle, and the latest available stable version is bundled with maintenance and feature releases of the CPython reference interpreter.  
 
     3. 하라는 대로 설치를 해주자.
     ```bash
