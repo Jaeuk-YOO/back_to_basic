@@ -6,6 +6,7 @@
     var this_is_var;
     let thisIsLet;
     const THISISCONST;
+    // 이런 식으로 의미없이 대문자로 선언하면 등짝 스매싱당한다.
 ```
 * 타입 : 종류들을 일단 알아만두자.  
 primitive 원시타입 : number, string, boolean, null, undefined, symbol  
