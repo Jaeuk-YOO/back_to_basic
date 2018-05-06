@@ -2,11 +2,7 @@
 이번에도 풀지 못했던 파이썬 퀴즈~
 A에서 미끄러지는 소리가 여기까지~~~
 
-퀴즈 목표 : txt파일 3개를 불러와서
-header와 comment와 계산해야하는 data내용을
-조건에 맞게 분리한 후 data 내용만 받아 각각 element의 value값을
-더해주는게 이번 퀴즈의 목표였다.
-
+퀴즈 목표 : txt파일 3개를 불러와서 header와 comment와 계산해야하는 data내용을 조건에 맞게 분리한 후 data 내용만 받아 각각 element의 value값을 더해주는게 이번 퀴즈의 목표였다.
 
 ```py 
 file_path1 = "./data.txt"
